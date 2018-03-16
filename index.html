@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<title>Make a Payment</title>
+	<script type="text/javascript" src ="script.js"></script>
+</head>
+
+<body id ="paymentPage">
+	<h2>Enter Payment Information</h2>
+	<form id = "payForm" onSubmit="return validateForm();">
+	<h3>Payment Selection</h3>
+
+
+	<label class = "container1">
+		<input id ="radio1" value = "creditCard" type="radio" name="paymentSel" onclick="updateForm(this);" checked>
+		<span id="credCardImage"><img src="images/Discover.png"><img src="images/MasterCard.png"><img src="images/AmEx.png"><img src="images/Visa.png"></span>
+		<span class = "checkmark1"></span>
+	</label>
+
+	<label class="container1">
+		<input id = "radio2" value = "PayPal" type="radio" name="paymentSel" onclick="updateForm(this);">
+		<span id ="payPal"><img src="images/PayPal.png"></span>
+		<span class = "checkmark1"></span>
+	</label>
+
+	<h3>Payment Information</h3>
+	
+	<p id = 'errorPrint'></p>
+	<div id="formDiv">
+		
+		<table name ="creditCard">
+				<tr>
+					<td>First Name</td>
+					<td><input type="text" name="FirstName" required></td>
+				</tr>
+				<tr>
+					<td>Last Name</td>
+					<td><input type="text" name="LastName" required></td>
+				</tr>
+				<tr>
+					<td>Address</td>
+					<td><input type="text" name="Address" required></td>
+				</tr>
+				<tr>
+					<td>City</td>
+					<td><input type="text" name="City" required></td>
+				</tr>
+				<tr>
+					<td>Zip</td>
+					<td><input id = "Zip" type="text" name="Zip" required></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input id = "Email" type="text" name="Email" required></td>
+				</tr>
+				<tr>
+					<td>Name on Card</td>
+					<td><input type="text" name="CardName" required></td>
+				</tr>
+				<tr>
+					<td>Card Number</td>
+					<td><input id = "CardNum" type="text" name="CardNum" required></td>
+				</tr>
+				<tr>
+					<td>CVV2/CVC<span id = "cvcInfo"><a href="https://en.wikipedia.org/wiki/Card_security_code" target="_blank"> What is this?</a></span></td>
+					<td><input id = "CVC" type="text" name="CVC" required></td>
+				</tr>
+				<tr>
+					<td>State</td>
+					<td><select id = "stateSel" required>
+						<option value="Select State">Select State</option>
+						<option value="AL">AL</option>
+						<option value="AK">AK</option>
+						<option value="AR">AR</option>
+						<option value="CA">CA</option>
+						<option value="CO">CO</option>
+						<option value="CT">CT</option>
+						<option value="DE">DE</option>
+						<option value="FL">FL</option>
+						<option value="GA">GA</option>
+						<option value="HI">HI</option>
+						<option value="ID">ID</option>
+						<option value="IL">IL</option>
+						<option value="IN">IN</option>
+						<option value="IA">IA</option>
+						<option value="KS">KS</option>
+						<option value="KY">KY</option>
+						<option value="LA">LA</option>
+						<option value="ME">ME</option>
+						<option value="MD">MD</option>
+						<option value="MA">MA</option>
+						<option value="MI">MI</option>
+						<option value="MN">MN</option>
+						<option value="MS">MS</option>
+						<option value="MO">MO</option>
+						<option value="MT">MT</option>
+						<option value="NE">NE</option>
+						<option value="NV">NV</option>
+						<option value="NH">NH</option>
+						<option value="NJ">NJ</option>
+						<option value="NM">NM</option>
+						<option value="NY">NY</option>
+						<option value="NC">NC</option>
+						<option value="ND">ND</option>
+						<option value="OH">OH</option>
+						<option value="OK">OK</option>
+						<option value="OR">OR</option>
+						<option value="PA">PA</option>
+						<option value="RI">RI</option>
+						<option value="SC">SC</option>
+						<option value="SD">SD</option>
+						<option value="TN">TN</option>
+						<option value="UT">UT</option>
+						<option value="VT">VT</option>
+						<option value="VA">VA</option>
+						<option value="WA">WA</option>
+						<option value="WV">WV</option>
+						<option value="WI">WI</option>
+						<option value="WY">WY</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td>Exp Date:</td>
+					<td><input id = "cardDate" type="month" required min="2017-01" max="2030-12" value="2017-12"></td>
+				</tr>
+				
+			</table>
+	</div>
+	<button type="submit"><img id="submit" src="images/PayNow.png"></button>
+</form>
+<a href="../index.html">ePortfolio</a>
+
+</body>
+</html>
